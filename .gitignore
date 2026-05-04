@@ -1,0 +1,17 @@
+**/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+.env
+auth_service/.env
+bot_service/.env
+
+auth_service/auth.db
+*.db
+
+.idea/
+.vscode/
+.DS_Store
