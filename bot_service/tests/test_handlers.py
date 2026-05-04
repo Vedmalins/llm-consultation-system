@@ -1,5 +1,5 @@
 from datetime import UTC, datetime, timedelta
-from unittest.mock import AsyncMock
+from unittest.mock import AsyncMock, Mock
 
 import fakeredis.aioredis
 import pytest
@@ -76,7 +76,7 @@ async def test_text_handler_with_token_sends_celery_task(
     fake_redis = fakeredis.aioredis.FakeRedis(decode_responses=True)
     monkeypatch.setattr("app.bot.handlers.get_redis", lambda: fake_redis)
 
-    task_mock = AsyncMock()
+    task_mock = Mock()
     monkeypatch.setattr("app.bot.handlers.llm_request.apply_async", task_mock)
 
     token = create_test_token()

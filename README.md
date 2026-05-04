@@ -116,6 +116,16 @@ uv run pytest
 * integration (Auth API)
 * mock (Redis, Celery, OpenRouter)
 
+Скриншоты тестов:
+
+### Auth Service
+
+![Auth Tests](screenshots/7_pytest_auth.jpg)
+
+### Bot Service
+
+![Bot Tests](screenshots/8_pytest_bot.jpg)
+
 ---
 
 ## Скриншоты
