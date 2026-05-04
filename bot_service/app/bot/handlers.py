@@ -78,6 +78,6 @@ async def text_handler(message: Message) -> None:
         )
         return
 
-    llm_request.delay(message.chat.id, message.text)
+    llm_request.apply_async(args=[message.chat.id, message.text])
 
     await message.answer("Запрос принят в обработку. Ответ придёт позже.")
